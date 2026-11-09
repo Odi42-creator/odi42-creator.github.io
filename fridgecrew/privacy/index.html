@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FridgeCrew Privacy Policy · Makodi Apps</title>
+<meta name="description" content="Privacy Policy of the FridgeCrew: Food Organizer app for Android.">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="../../fridgecrew/icon.png">
+<style>
+:root { --brand:#3c87f7; --brand-dark:#2563d9; --bg:#f6f7f9; --card:#fff; --text:#1c1d20; --muted:#60646c; --line:#e3e5e8; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0e0f11; --card:#1b1c1f; --text:#f1f2f4; --muted:#b0b4ba; --line:#2e3135; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; overflow-wrap:anywhere; }
+a { color:var(--brand); }
+header { background:linear-gradient(135deg,#5a9cff,var(--brand) 45%,var(--brand-dark)); color:#fff; }
+.bar { max-width:820px; margin:0 auto; padding:14px 20px; display:flex; align-items:center; gap:12px; }
+.bar a { color:#fff; text-decoration:none; font-weight:700; }
+.hero { max-width:820px; margin:0 auto; padding:24px 20px 40px; }
+.hero h1 { margin:0 0 6px; font-size:clamp(26px,7vw,34px); line-height:1.2; }
+@media (max-width:520px) { .card { padding:18px; } .app { flex-direction:column; } }
+.hero p { margin:0; opacity:.92; font-size:18px; }
+main { max-width:820px; margin:-24px auto 40px; padding:0 16px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:24px; margin-bottom:16px; }
+.app { display:flex; gap:18px; align-items:flex-start; }
+.app img { width:72px; height:72px; border-radius:18px; flex:none; }
+.app h2 { margin:0 0 6px; }
+.links { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+.btn { display:inline-block; padding:10px 16px; border-radius:12px; background:var(--brand); color:#fff; text-decoration:none; font-weight:600; }
+.btn.alt { background:transparent; color:var(--brand); border:1px solid var(--brand); }
+h2 { font-size:21px; margin:28px 0 8px; }
+.card > h2:first-child { margin-top:0; }
+li { margin:4px 0; }
+.lang { font-size:14px; color:var(--muted); }
+footer { max-width:820px; margin:0 auto 40px; padding:0 20px; color:var(--muted); font-size:14px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="bar"><a href="../../">Makodi Apps</a></div>
+  <div class="hero"><h1>FridgeCrew Privacy Policy</h1><p>FridgeCrew: Food Organizer · <a href="#uk" style="color:#fff">Українською ↓</a></p></div>
+</header>
+<main>
+<div class="card"><p>Effective date: November 10, 2026</p>
+<p>FridgeCrew: Food Organizer (the "app") helps you keep track of the food in your fridge and share it with people close to you. This policy explains what data the app handles, why, and how to delete it.</p>
+<p>Contact: <a href="mailto:makodiapp@gmail.com">makodiapp@gmail.com</a></p>
+<h2>What data is handled</h2>
+<p><strong>Data stored only on your phone:</strong></p>
+<ul>
+<li>your personal fridge: shelves, products, dates, quantities, shopping list, custom categories;</li>
+<li>your name, language, theme, and notification settings;</li>
+<li>statistics (how many products you have and where) are calculated on the phone from this same data and are not sent anywhere.</li>
+</ul>
+<p><strong>Anonymous account.</strong> The first time you use a shared fridge or receipt reading, Google Firebase creates a random anonymous user ID for the phone. It lets the server know that requests come from the same phone. No email, phone number, or real name is needed for this.</p>
+<p><strong>Shared fridge data.</strong> If you create or join a shared fridge, the following is sent to Google Firebase servers:</p>
+<ul>
+<li>the anonymous user ID;</li>
+<li>the name you entered in the app;</li>
+<li>the fridge name, shelves, products, dates, quantities, shopping list, and custom categories.</li>
+</ul>
+<p>Only members of that fridge, meaning people who have its 8-character code, can see this data. Enter only a name you are happy to show them.</p>
+<p><strong>Sign in with Google (optional).</strong> Signing in is not required; you can use the app without it. If you tap "Sign in with Google", your anonymous account is linked to your Google account so that your shared fridges are not lost. Google Firebase then stores:</p>
+<ul>
+<li>your Google email address and internal Google account ID;</li>
+<li>the name from your Google account. It is only filled into the name field if that field is still empty, and you can change it.</li>
+</ul>
+<p>Only you can see the email, in the app's settings. It is not shown to other fridge members. The app does not use your Google profile photo.</p>
+<p><strong>Receipt photos.</strong> When you choose to add from a receipt, the app makes the photo smaller and sends it to our server (Google Cloud Functions, Europe region, Belgium). The server passes the photo to Anthropic (the Claude service) to recognize the items and returns a list of names and categories to the app. The photo may contain anything printed on the receipt, such as the store name, date, and total.</p>
+<ul>
+<li>Neither the app nor our server keeps the photo after recognition.</li>
+<li>Under Anthropic's commercial terms, data sent through its API is not used to train models.</li>
+<li>To prevent abuse, there is a limit of 5 receipts per day per person. For this, the server keeps a counter: the anonymous user ID, the date, the number of receipts that day, and the time of the last request.</li>
+<li>Google Cloud keeps technical server logs (request time, errors). Photos are not written to the logs.</li>
+</ul>
+<h2>Permissions</h2>
+<ul>
+<li><strong>Camera:</strong> only to photograph a receipt when you choose to.</li>
+<li><strong>Photos:</strong> only to pick a photo or screenshot of a receipt. Android shows its own picker for this, so the app does not get access to all your photos.</li>
+<li><strong>File storage (Android 12 and older only):</strong> so the camera can save the receipt photo before it is recognized.</li>
+<li><strong>Notifications:</strong> to remind you about product dates. Reminders are created by the phone itself, without a server. You can turn them off in Settings.</li>
+<li><strong>Internet:</strong> for shared fridges, receipt reading, and signing in with Google.</li>
+</ul>
+<h2>What the app does not do</h2>
+<ul>
+<li>It does not show ads.</li>
+<li>It does not sell data or share it for advertising.</li>
+<li>It does not use analytics or track users.</li>
+<li>It does not collect location, contacts, or microphone audio.</li>
+</ul>
+<h2>Third-party services</h2>
+<ul>
+<li><strong>Google Firebase</strong> (Firestore, anonymous sign-in, Google sign-in, Cloud Functions) stores shared fridge data, accounts, and receipt counters, and runs the receipt server: <a href="https://firebase.google.com/support/privacy" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+<li><strong>Anthropic</strong> recognizes receipt photos: <a href="https://www.anthropic.com/legal/privacy" rel="noopener">https://www.anthropic.com/legal/privacy</a></li>
+</ul>
+<p>These companies' servers may be located outside your country. Data is sent over an encrypted connection.</p>
+<h2>How long data is kept</h2>
+<ul>
+<li>Data on your phone stays until you delete it or remove the app.</li>
+<li>Shared fridge data is kept while the fridge has members.</li>
+<li>When the last member leaves a fridge, it is deleted with its products and shopping list.</li>
+<li>Your account (anonymous or linked to Google) is kept until you delete it.</li>
+<li>Receipt photos are not kept. The receipt counter contains only the anonymous ID, the date, and the count, and is overwritten every day.</li>
+</ul>
+<h2>How to delete your account and data</h2>
+<ul>
+<li><strong>Leave a shared fridge:</strong> "Shared" tab → "Leave this fridge". Your name disappears from the member list. Products you added stay in the fridge for the other members.</li>
+<li><strong>Delete everything:</strong> Settings ⚙️ → "Delete all my data". This removes your personal fridge, your membership of all shared fridges, your name, and your account (anonymous or linked to Google, including the stored email). If you entered your own API key for receipts in an older version of the app, it is deleted too. This cannot be undone.</li>
+<li><strong>By email:</strong> if you cannot access the app, write to <a href="mailto:makodiapp@gmail.com">makodiapp@gmail.com</a> with the subject "Data deletion". Include your Google email if you signed in with Google. We will delete the account and related data within 30 days.</li>
+</ul>
+<h2>Children</h2>
+<p>The app is not intended for children under 13, and we do not knowingly collect their data.</p>
+<h2>Changes to this policy</h2>
+<p>If this policy changes, we will update this page and the date at the top. Significant changes, such as new services or new data, will be described here before they take effect.</p></div>
+<div class="card" id="uk" lang="uk"><p class="lang">Українською</p><h1>Політика конфіденційності FridgeCrew</h1>
+<p>Дата набрання чинності: 10 листопада 2026 р.</p>
+<p>FridgeCrew: Food Organizer (далі «додаток») допомагає вести облік продуктів у холодильнику й ділитися ним із близькими. Ця політика пояснює, які дані обробляє додаток, для чого і як їх видалити.</p>
+<p>Контакт для запитань: <a href="mailto:makodiapp@gmail.com">makodiapp@gmail.com</a></p>
+<h2>Які дані обробляються</h2>
+<p><strong>Дані, що зберігаються лише на твоєму телефоні:</strong></p>
+<ul>
+<li>особистий холодильник: полиці, продукти, терміни, кількість, список покупок, свої категорії;</li>
+<li>твоє ім'я, мова, тема, налаштування сповіщень;</li>
+<li>статистика (скільки продуктів і де лежать) рахується на телефоні з цих самих даних і нікуди не надсилається.</li>
+</ul>
+<p><strong>Анонімний акаунт.</strong> Коли ти вперше користуєшся спільним холодильником або читанням чека, Google Firebase створює для телефону випадковий анонімний номер користувача. За ним сервер розуміє, що запити йдуть з того самого телефону. Пошта, телефон чи справжнє ім'я для цього не потрібні.</p>
+<p><strong>Дані спільних холодильників.</strong> Якщо ти створюєш спільний холодильник або приєднуєшся до нього, на сервери Google Firebase передаються:</p>
+<ul>
+<li>анонімний номер користувача;</li>
+<li>ім'я, яке ти вказав у додатку;</li>
+<li>назва холодильника, полиці, продукти, терміни, кількість, список покупок і свої категорії.</li>
+</ul>
+<p>Ці дані бачать лише учасники цього холодильника, тобто люди, які мають його 8-символьний код. Вказуй лише те ім'я, яке хочеш показати цим людям.</p>
+<p><strong>Вхід через Google (за бажанням).</strong> Входити не обов'язково, додатком можна користуватися й без цього. Якщо ти натискаєш «Увійти через Google», анонімний акаунт пов'язується з твоїм акаунтом Google, щоб спільні холодильники не загубилися. Тоді Google Firebase зберігає:</p>
+<ul>
+<li>адресу пошти Google і внутрішній номер акаунта Google;</li>
+<li>ім'я з акаунта Google. Його підставляють у поле імені, лише якщо воно ще порожнє, і ти можеш його змінити.</li>
+</ul>
+<p>Пошту бачиш лише ти в налаштуваннях додатка. Іншим учасникам холодильника вона не показується. Фото профілю Google додаток не використовує.</p>
+<p><strong>Фото чеків.</strong> Коли ти сам обираєш додавання з чека, додаток зменшує фото й надсилає його на наш сервер (Google Cloud Functions, регіон Європа, Бельгія). Сервер передає фото компанії Anthropic (сервіс Claude), щоб розпізнати товари, і повертає в додаток список назв і категорій. Фото може містити дані, надруковані на чеку, наприклад назву магазину, дату й суму.</p>
+<ul>
+<li>Ні додаток, ні наш сервер не зберігають фото після розпізнавання.</li>
+<li>За комерційними умовами Anthropic дані, надіслані через API, не використовуються для навчання моделей.</li>
+<li>Щоб сервісом не зловживали, діє ліміт: 5 чеків на день для однієї людини. Для цього сервер зберігає лічильник: анонімний номер користувача, дату, кількість чеків за цей день і час останнього запиту.</li>
+<li>Google Cloud веде технічні журнали сервера (час запиту, помилки). Фото в журнали не потрапляють.</li>
+</ul>
+<h2>Дозволи</h2>
+<ul>
+<li><strong>Камера:</strong> лише щоб сфотографувати чек, коли ти сам цього хочеш.</li>
+<li><strong>Фото:</strong> лише щоб вибрати фото чи скріншот чека. Для цього Android показує своє вікно вибору, доступу до всіх фото додаток не отримує.</li>
+<li><strong>Запис файлів (лише Android 12 і старіші):</strong> щоб камера могла зберегти знімок чека перед розпізнаванням.</li>
+<li><strong>Сповіщення:</strong> щоб нагадувати про терміни продуктів. Нагадування створює сам телефон, без сервера. Їх можна вимкнути в налаштуваннях.</li>
+<li><strong>Інтернет:</strong> для спільних холодильників, читання чеків і входу через Google.</li>
+</ul>
+<h2>Чого додаток не робить</h2>
+<ul>
+<li>Не показує рекламу.</li>
+<li>Не продає дані й не передає їх для реклами.</li>
+<li>Не використовує аналітику чи стеження за користувачами.</li>
+<li>Не збирає місцезнаходження, контакти чи мікрофон.</li>
+</ul>
+<h2>Сторонні сервіси</h2>
+<ul>
+<li><strong>Google Firebase</strong> (Firestore, анонімний вхід, вхід через Google, Cloud Functions) зберігає дані спільних холодильників, акаунти й лічильники чеків, а також запускає сервер для чеків: <a href="https://firebase.google.com/support/privacy" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+<li><strong>Anthropic</strong> розпізнає фото чеків: <a href="https://www.anthropic.com/legal/privacy" rel="noopener">https://www.anthropic.com/legal/privacy</a></li>
+</ul>
+<p>Сервери цих компаній можуть бути розташовані за межами твоєї країни. Дані передаються захищеним з'єднанням.</p>
+<h2>Скільки зберігаються дані</h2>
+<ul>
+<li>Дані на телефоні лишаються, доки ти їх не видалиш або не видалиш додаток.</li>
+<li>Дані спільного холодильника зберігаються, доки в ньому є учасники.</li>
+<li>Коли холодильник залишає останній учасник, він видаляється разом із продуктами й покупками.</li>
+<li>Акаунт (анонімний або пов'язаний з Google) зберігається, доки ти його не видалиш.</li>
+<li>Фото чеків не зберігаються. Лічильник чеків містить лише анонімний номер, дату й кількість і щодня перезаписується.</li>
+</ul>
+<h2>Як видалити акаунт і дані</h2>
+<ul>
+<li><strong>Вийти зі спільного холодильника:</strong> вкладка «Спільне» → «Вийти з цього холодильника». Твоє ім'я зникає зі списку учасників. Продукти, які ти додав, лишаються в холодильнику для інших учасників.</li>
+<li><strong>Видалити все:</strong> налаштування ⚙️ → «Видалити всі мої дані». Це прибирає особистий холодильник, участь у всіх спільних, ім'я та акаунт (анонімний або пов'язаний з Google, разом із збереженою поштою). Якщо в старій версії додатка ти вводив власний ключ API для чеків, він теж видаляється. Дія незворотна.</li>
+<li><strong>Запит поштою:</strong> якщо не маєш доступу до додатка, напиши на <a href="mailto:makodiapp@gmail.com">makodiapp@gmail.com</a> з темою «Видалення даних». Вкажи пошту Google, якщо входив через Google. Ми видалимо акаунт і пов'язані дані протягом 30 днів.</li>
+</ul>
+<h2>Діти</h2>
+<p>Додаток не призначений для дітей віком до 13 років, і ми свідомо не збираємо їхніх даних.</p>
+<h2>Зміни політики</h2>
+<p>Якщо політика зміниться, ми оновимо цю сторінку й дату вгорі. Значні зміни, наприклад нові сервіси чи нові дані, буде описано тут до того, як вони запрацюють.</p></div>
+</main>
+<footer>Makodi Apps · Contact: <a href="mailto:makodiapp@gmail.com">makodiapp@gmail.com</a></footer>
+</body>
+</html>
